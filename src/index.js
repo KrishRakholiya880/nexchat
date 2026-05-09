@@ -1,10 +1,8 @@
-import express from "express";
-import http from "http";
-import cors from "cors";
-import helmet from "helmet";
-import dotenv from "dotenv";
-
-dotenv.config();
+const express = require("express");
+const http = require("http");
+const cors = require("cors");
+const helmet = require("helmet");
+const { application } = require("./config/index.js");
 
 const app = express();
 const server = http.createServer(app);
@@ -19,8 +17,6 @@ app.get("/", (req, res) => {
   res.json({ message: "NEXCHAT server is running 🚀" });
 });
 
-const PORT = process.env.PORT || 3000;
-
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+server.listen(application.PORT || 3000, () => {
+  console.log(`Server running on port ${application.PORT || 3000}`);
 });

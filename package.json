@@ -10,11 +10,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
+    "dotenv-safe": "^9.1.0",
     "express": "^5.2.1",
     "helmet": "^8.1.0",
     "ioredis": "^5.10.1",
